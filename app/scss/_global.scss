@@ -2,14 +2,55 @@ html,
 body {
     height: 100%;
 }
+
 body {
     font-size: 18px;
     @extend %manrope-400;
     background-color: #F6F5F5;
     color: #494A50;
 }
+
 .container {
     max-width: 1330px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.social {
+    position: relative;
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item+.social__list-item {
+        margin-left: 10px;
+    }
+
+    &__list-link {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        background-color: $accent;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.social::after,
+.social::before {
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 1px;
+    background-color: $accent;
+    top: 50%;
+}
+.social::before{
+    left: -64px;
+}
+.social::after{
+    right: -64px;
 }
