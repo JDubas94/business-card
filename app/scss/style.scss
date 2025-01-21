@@ -4,5 +4,30 @@
 @import 'global';
 
 
+.header{
+    &__wrapper{
+        padding: 50px 0;
+        border-bottom: 1px solid $accent;
+    }
+    
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu-list{
+        display: flex;
+    }
+    &__list-item+.header__list-item{
+        padding-left: 70px;
+    }
+    &__link{
+        font-size: 32px;
+        color: #A4C0E0;
+        @extend %forum-400;
+        text-transform: uppercase;
+    }
+}
+
 
 @import 'media';

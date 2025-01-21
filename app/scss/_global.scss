@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    font-size: 18px;
+    @extend %manrope-400;
+    background-color: #F6F5F5;
+    color: #494A50;
+}
+.container {
+    max-width: 1330px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
