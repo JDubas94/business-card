@@ -167,6 +167,33 @@
     }
 }
 
+.about-me{
+    padding-top: 101px;
+    &__wrapper{
+        display: flex;
+    }
+    &__content{
+        margin-right: 50px;
+    }
+    &__title{
+        margin-top: 33px;
+        font-size: 48px;
+        @extend %manrope-700;
+        margin-bottom: 30px;
+    }
+
+    &__text{
+        max-width: 640px;
+        margin-bottom: 15px;
+    }
+
+    &__images{
+        width: 610px;
+        height: 632px;
+        object-fit: cover;
+    }
+}
+
 
 
 @import 'media';
