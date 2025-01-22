@@ -31,11 +31,14 @@ body {
         display: inline-block;
         width: 34px;
         height: 34px;
-        background-color: $accent;
-        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &__list-img {
+        width: 34px;
+        height: 34px;
     }
 }
 
@@ -47,10 +50,13 @@ body {
     height: 1px;
     background-color: $accent;
     top: 50%;
+    transform: translateY(-50%);
 }
-.social::before{
+
+.social::before {
     left: -64px;
 }
-.social::after{
+
+.social::after {
     right: -64px;
 }

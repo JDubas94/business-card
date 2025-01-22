@@ -4,24 +4,27 @@
 @import 'global';
 
 
-.header{
-    &__wrapper{
+.header {
+    &__wrapper {
         padding: 50px 0;
         border-bottom: 1px solid $accent;
     }
-    
-    &__menu{
+
+    &__menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    &__menu-list{
+
+    &__menu-list {
         display: flex;
     }
-    &__list-item+.header__list-item{
+
+    &__list-item+.header__list-item {
         padding-left: 70px;
     }
-    &__link{
+
+    &__link {
         font-size: 32px;
         color: #A4C0E0;
         @extend %forum-400;
@@ -29,13 +32,103 @@
     }
 }
 
-.footer{
-    &__wrapper{
+.footer {
+    &__wrapper {
         padding: 50px 0 57px;
         border-top: 1px solid $accent;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.top {
+    padding: 47px 34px;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__content {
+        padding-top: 125px;
+        margin-right: 57px;
+    }
+
+    &__title {
+        font-size: 96px;
+        @extend %forum-400;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        max-width: 426px;
+        @extend %forum-400;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        width: 260px;
+        height: 61px;
+        border: none;
+        padding: none;
+        background-color: $accent;
+        margin-bottom: 139px;
+        cursor: pointer;
+    }
+
+    &__blockquote {
+        max-width: 330px;
+        position: relative;
+    }
+
+    &__blockquote::before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/brackets.svg');
+        width: 62px;
+        height: 52px;
+        top: -40px;
+        left: 0;
+    }
+
+    &__img {
+        width: 601px;
+        height: 754px;
+    }
+
+    .social {
+        position: absolute;
+        right: 135px;
+        top: 50%;
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__list-item+.social__list-item {
+            margin-left: 0;
+        }
+
+        &__list-item {
+            margin-bottom: 16px;
+        }
+    }
+
+    .social::after,
+    .social::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 55px;
+        background-color: $accent;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%
+    }
+
+    .social::before {
+        top: -35%;
     }
 }
 
