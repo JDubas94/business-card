@@ -72,3 +72,15 @@ popupTopButtons.forEach((button) => {
       closePopup(popupTop);
     }
   });
+
+  $(function(){
+    $('.projects-tabs__top-item').on('click', function(e){
+        e.preventDefault()
+        $('.projects-tabs__top-item').removeClass('projects-tabs__top-item--active');
+        $(this).addClass('projects-tabs__top-item--active');
+
+        $('.projects-tabs__content-item').removeClass('projects-tabs__content-item--active');
+        $($(this).attr('href')).addClass('projects-tabs__content-item--active');
+    })
+
+  });
