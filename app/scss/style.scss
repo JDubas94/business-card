@@ -231,7 +231,8 @@
         border: 1px solid $accent;
         position: relative;
     }
-    &__item::before{
+
+    &__item::before {
         content: '';
         position: absolute;
         width: 50px;
@@ -242,13 +243,16 @@
         background-position: center;
         background-size: cover;
     }
-    &__item-instagram::before{
+
+    &__item-instagram::before {
         background-image: url('../images/icons/instagram.svg');
     }
-    &__item-facebook::before{
+
+    &__item-facebook::before {
         background-image: url('../images/icons/facebook.svg');
     }
-    &__item-facebook::after{
+
+    &__item-facebook::after {
         content: '';
         position: absolute;
         width: 196px;
@@ -284,44 +288,196 @@
     }
 }
 
-.smm{
+.smm {
     padding: 61px 0 90px;
-    &__title{
+
+    &__title {
         @extend %title;
         margin-bottom: 30px;
     }
-    &__item{
+
+    &__item {
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
     }
-    &__img{
-        width: 650px;
+
+    &__img {
+        max-width: 650px;
         height: 656px;
         object-fit: cover;
     }
-    &__img-right{
+
+    &__img-right {
         order: 1;
     }
-    &__subtitle{
+
+    &__subtitle {
         font-size: 36px;
         color: $accent;
         margin-bottom: 20px;
     }
-    &__content-one{
+
+    &__content-one {
         padding: 193px 0 194px 52px;
     }
-    &__text-one{
+
+    &__text-one {
         max-width: 598px;
     }
-    &__content-two{
+
+    &__content-two {
         padding: 179px 66px 180px 0;
     }
-    &__text{
+
+    &__text {
         max-width: 580px;
     }
-    &__content-three{
+
+    &__content-three {
         padding: 188px 0 188px 80px;
+    }
+}
+
+.target {
+    padding-bottom: 100px;
+
+    &__title {
+        @extend %title;
+        margin-bottom: 30px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__card {
+        max-width: calc(33.333% - 20px);
+        padding: 30px 22px 20px 30px;
+        position: relative;
+        height: 254px;
+        border: 1px solid $accent;
+        background-color: #fff;
+    }
+
+    &__card--empty {
+        background-color: $accent;
+        flex: 1 1 100%;
+        max-width: calc(33.333% - 20px);
+        position: relative;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        @extend %manrope-700;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 368px;
+    }
+
+    &__link {
+        position: absolute;
+        padding-right: 34px;
+        right: 30px;
+        bottom: 20px;
+        @extend %manrope-600;
+        color: $accent;
+    }
+
+    &__link::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        right: 0;
+        top: 0;
+    }
+
+    &__card--empty::after {
+        content: '';
+        position: absolute;
+        width: 52px;
+        height: 55px;
+        background-image: url('../images/icons/arrow-right.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 30px;
+        top: 22px;
+        cursor: pointer;
+    }
+
+    &__btn {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        color: #FFFFFF;
+        @extend %manrope-500;
+        left: 30px;
+        bottom: 30px;
+        cursor: pointer;
+    }
+}
+.popup-top{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    &__inner{
+        background-color: #fff;
+        max-width: 557px;
+        padding: 71px 50px 49px 51px;
+        text-align: center;
+        position: relative;
+    }
+    &__title{
+        font-size: 36px;
+        @extend %manrope-700;
+        margin-bottom: 20px;
+    }
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__form{
+        max-width: 391px;
+        margin: 0 auto;
+    }
+    &__label{
+        display: block;
+        text-align: left;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    &__input{
+        width: 100%;
+        padding: 20px 10px;
+        border: 1px solid $accent;
+        margin-top: 8px;
+    }
+    &__input--text{
+        padding: 10px 10px 119px;
+    }
+    &__btn{
+        width: 100%;
+        height: 61px;
+        border: none;
+        background-color: $accent;
+        cursor: pointer;
     }
 }
 
