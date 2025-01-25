@@ -60,6 +60,11 @@ function images() {
         .pipe(dest('dist/images'))
 }
 
+function fonts() {
+    return src('app/fonts/**/*')
+        .pipe(dest('dist/fonts'));
+}
+
 function build() {
     return src([
         'app/**/*.html',
@@ -87,6 +92,6 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, fonts, build);
 
 exports.default = parallel(styles, scripts, browsersync, watching);

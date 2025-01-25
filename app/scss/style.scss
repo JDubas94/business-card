@@ -289,7 +289,7 @@
 }
 
 .smm {
-    padding: 61px 0 90px;
+    padding: 61px 0 70px;
 
     &__title {
         @extend %title;
@@ -495,55 +495,111 @@
     background-color: #fff;
     border-top: 1px solid $accent;
     border-bottom: 1px solid $accent;
-    &__wrapper{
+
+    &__wrapper {
         position: relative;
     }
-    
-    &__title{
+
+    &__title {
         @extend %title;
         margin-bottom: 30px;
     }
-    &__top{
+
+    &__top {
         position: absolute;
     }
-    &__top-item{
+
+    &__top-item {
         display: inline-block;
         color: #A9A9A9;
         padding-bottom: 9px;
         margin-bottom: 30px;
-        &+.projects-tabs__top-item{
+
+        &+.projects-tabs__top-item {
             margin-left: 48px;
         }
     }
-    &__top-item--active{
+
+    &__top-item--active {
         color: #494A50;
         border-bottom: 1px solid $accent;
     }
 
     &__content-item {
         display: none;
-        &.projects-tabs__content-item--active{
+
+        &.projects-tabs__content-item--active {
             display: flex;
             justify-content: space-between;
         }
     }
-    &__content-boxtext{
+
+    &__content-boxtext {
         max-width: 530px;
         padding-top: 64px;
         margin-right: 130px;
         text-align: left;
     }
-    &__content-text--top{
+
+    &__content-text--top {
         margin-bottom: 20px;
     }
-    &__content-boximages{
+
+    &__content-boximages {
         display: flex;
         gap: 20px;
     }
-    &__content-img{
+
+    &__content-img {
         display: block;
         width: 100%;
         height: auto;
+    }
+}
+
+.why-me {
+    padding: 100px 0;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__img {
+        display: block;
+        width: 540px;
+        height: 618px;
+        object-fit: cover;
+        margin-right: 200px;
+    }
+
+    &__content {
+        padding-top: 27px;
+        max-width: 560px;
+    }
+
+    &__content-title {
+        @extend %title;
+        margin-bottom: 20px;
+    }
+
+    .why-me__list {
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    &__list-item {
+        @extend %manrope-700;
+        color: $accent;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    &__content-text {
+        margin-top: 20px;
     }
 }
 
