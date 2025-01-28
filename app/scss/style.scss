@@ -4,24 +4,33 @@
 @import 'global';
 
 
+
+
 .header {
     &__wrapper {
-        padding: 50px 0;
-        border-bottom: 1px solid $accent;
+        position: relative;
     }
 
     &__menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        padding: 50px 10px 50px;
+    }
+     &__menu::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $accent;
+        bottom: 0;
+        left: 0;
     }
 
     &__menu-list {
         display: flex;
-    }
-
-    &__list-item+.header__list-item {
-        padding-left: 70px;
+        gap: 70px;
     }
 
     &__link {
@@ -29,6 +38,14 @@
         color: #A4C0E0;
         @extend %forum-400;
         text-transform: uppercase;
+    }
+
+    &__menu-btn {
+        display: none;
+    }
+
+    &__button {
+        display: none;
     }
 }
 
@@ -93,11 +110,58 @@
         left: 0;
     }
 
-    &__img {
-        width: 601px;
-        height: 754px;
-        object-fit: cover
+    &__container-img {
+        position: relative;
+        display: inline-block;
     }
+
+    &__container-img::before,
+    &__container-img::after {
+        content: '';
+        position: absolute;
+        background-color: $accent;
+        height: 1px;
+        width: 100%;
+    }
+
+    &__container-img::before {
+        top: 0;
+        left: 10px;
+    }
+
+    &__container-img::after {
+        right: 0;
+        bottom: 10px;
+        z-index: -1;
+    }
+
+    &__img-line {
+        position: absolute;
+        background-color: $accent;
+        width: 1px;
+        height: 100%;
+    }
+
+    &__img-line--one {
+        left: 10px;
+        top: 0;
+    }
+
+    &__img-line--two {
+        right: 0;
+        bottom: 10px;
+    }
+
+    &__img {
+        width: 591px;
+        height: 744px;
+        object-fit: cover;
+        padding-top: 10px;
+        padding-right: 10px;
+        display: block;
+        position: relative;
+    }
+
 
     .social {
         position: absolute;
