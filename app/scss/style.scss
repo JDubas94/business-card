@@ -205,34 +205,37 @@
 
 .statistics {
     background-color: $accent;
+    overflow: hidden;
 
-    &__wrapper {
-        text-align: center;
-    }
-
-    &__list {
+    .statistics__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 50px 0px;
     }
 
     &__list-item {
+        font-size: clamp(27px, 5vw, 64px);
         font-size: 64px;
-        padding: 50px 113px 50px;
-
-        &:first-child {
-            padding-left: 0;
-        }
-
-        &:last-child {
-            padding-right: 0;
-            border: none;
-        }
+        position: relative;
+        flex: 0 1 auto;
+        text-align: center;
+        
     }
 
-    &__list-item {
-        border-right: 1px solid #F6F5F5;
+    &__list-item::after {
+        content: '';
+        position:absolute;
+        width: 1px;
+        height: 220%;
+        background-color: #fff;
+        right:-113px;
+        top:-50px;
     }
+    &__list-item:last-child::after{
+        display: none;
+    }
+    
 
     &__item-text {
         font-size: 24px;

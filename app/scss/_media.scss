@@ -44,6 +44,18 @@
             height: 100%;
         }
     }
+    .statistics{
+        .statistics__list{
+            padding-inline: 10px;
+        }
+        &__list-item{
+            font-size: 48px;
+        }
+        &__list-item::after{
+           right: -72px;
+        }
+    }
+
 }
 
 @media (max-width: 845px) {
@@ -132,7 +144,6 @@
         }
 
         &__menu-btn {
-            // display: block;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -259,6 +270,23 @@
             font-size: 16px;
         }
     }
+    .statistics{
+        &__list-item::after {
+            right: -33px;
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .statistics{
+        .statistics__list{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        &__list-item{
+            font-size: 36px;
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -300,6 +328,35 @@
             width: 100%;
             margin-bottom: 0;
             font-size: 15px;
+        }
+    }
+    .statistics{
+        .statistics__list{
+            padding-top: 27px;
+            padding-bottom: 0px;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        &__list-item{
+            margin-bottom: 25px;
+        }
+        &__list-item::after {
+            right: -99px;
+            top: 0;
+            height: 100%;
+        }
+        &__list-item:last-child{
+            flex: 1 1 100%;
+            padding-top: 10px;
+            border-top: 1px solid #fff;
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .statistics{
+        &__list-item::after {
+            right: -33px;
         }
     }
 }
@@ -352,6 +409,16 @@
             gap: 23px;
         }
     }
+    .statistics{
+        &__list-item::after {
+            right: -33px;
+        }
+        
+        &__item-text{
+            font-size: 18px;
+        }
+    }
+    
 }
 
 @media (max-width: 320px) {
@@ -399,7 +466,17 @@
             font-size: 32px;
         }
     }
+    .statistics{
+        .statistics__list{
+            padding-top: 24px;
+            padding-bottom: 0;
+        }
+        &__list-item{
+            font-size: 27px;
+        }
+        &__item-text{
+            font-size: 10px;
+        }
+    }
     
 }
-
-
