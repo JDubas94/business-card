@@ -121,17 +121,17 @@
         position: absolute;
         background-color: $accent;
         height: 1px;
-        width: 100%;
+        width: calc(100% - 1vw);
     }
 
     &__container-img::before {
         top: 0;
-        left: 10px;
+        left: 1vw;
     }
 
     &__container-img::after {
         right: 0;
-        bottom: 10px;
+        bottom: 1vw;
         z-index: -1;
     }
 
@@ -139,25 +139,25 @@
         position: absolute;
         background-color: $accent;
         width: 1px;
-        height: 100%;
+        height: calc(100% - 1vw);
     }
 
     &__img-line--one {
-        left: 10px;
+        left: 1vw;
         top: 0;
     }
 
     &__img-line--two {
         right: 0;
-        bottom: 10px;
+        bottom: 1vw;
     }
 
     &__img {
         width: 591px;
         height: 744px;
         object-fit: cover;
-        padding-top: 10px;
-        padding-right: 10px;
+        padding-top: 1vw;
+        padding-right: 1vw;
         display: block;
         position: relative;
     }
