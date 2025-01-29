@@ -244,6 +244,7 @@
 
 .about-me {
     padding-top: 101px;
+    padding-bottom: 50px;
 
     &__wrapper {
         display: flex;
@@ -264,10 +265,58 @@
         margin-bottom: 15px;
     }
 
+    &__container-img {
+        position: relative;
+        display: inline-block;
+    }
+
+    &__container-img::before,
+    &__container-img::after {
+        content: '';
+        position: absolute;
+        background-color: $accent;
+        height: 1px;
+        width: calc(100% - 1vw);
+    }
+
+    &__container-img::before {
+        top: 0;
+        right:  1vw;
+    }
+
+    &__container-img::after {
+        left: 0;
+        bottom: 1vw;
+        z-index: -1;
+        
+    }
+
+    &__img-line {
+        position: absolute;
+        background-color: $accent;
+        width: 1px;
+        height: calc(100% - 1vw);
+    }
+
+    &__img-line--one {
+        left: 0;
+        top: 0;
+    }
+
+    &__img-line--two {
+        right: 1vw;
+        bottom: 1vw;
+    }
+
+
     &__images {
-        width: 610px;
-        height: 632px;
+        width: 600px;
+        height: 622px;
         object-fit: cover;
+        padding-top: 1vw;
+        padding-left: 1vw;
+        display: block;
+        position: relative;
     }
 }
 
