@@ -18,7 +18,8 @@
         position: relative;
         padding: 50px 10px 50px;
     }
-     &__menu::after{
+
+    &__menu::after {
         content: '';
         position: absolute;
         width: 100%;
@@ -220,22 +221,23 @@
         position: relative;
         flex: 0 1 auto;
         text-align: center;
-        
+
     }
 
     &__list-item::after {
         content: '';
-        position:absolute;
+        position: absolute;
         width: 1px;
         height: 220%;
         background-color: #fff;
-        right:-113px;
-        top:-50px;
+        right: -113px;
+        top: -50px;
     }
-    &__list-item:last-child::after{
+
+    &__list-item:last-child::after {
         display: none;
     }
-    
+
 
     &__item-text {
         font-size: 24px;
@@ -281,14 +283,14 @@
 
     &__container-img::before {
         top: 0;
-        right:  1vw;
+        right: 1vw;
     }
 
     &__container-img::after {
         left: 0;
         bottom: 1vw;
         z-index: -1;
-        
+
     }
 
     &__img-line {
@@ -415,6 +417,7 @@
         margin-bottom: 10px;
         gap: 52px;
     }
+
     &__container-img {
         position: relative;
         display: inline-block;
@@ -431,16 +434,17 @@
 
     &__container-img::before {
         top: 0;
-        right:  1vw;
+        right: 1vw;
     }
 
     &__container-img::after {
         left: 0;
         bottom: 1vw;
         z-index: -1;
-        
+
     }
-    &__container-img--right::before{
+
+    &__container-img--right::before {
         top: 0;
         left: 1vw;
     }
@@ -467,13 +471,14 @@
         bottom: 1vw;
         z-index: -1;
     }
-    &__img-line--oneright{
+
+    &__img-line--oneright {
         left: 1vw;
         top: 0;
         z-index: -1;
     }
 
-    &__img-line--tworight{
+    &__img-line--tworight {
         right: 0;
         bottom: 1vw;
     }
@@ -491,7 +496,8 @@
     &__container-img--right {
         order: 1;
     }
-    &__img-right{
+
+    &__img-right {
         padding-left: 0;
         padding-top: 1vw;
         padding-right: 1vw;
@@ -533,14 +539,13 @@
     }
 
     &__cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: auto; 
         gap: 20px;
     }
 
     &__card {
-        max-width: calc(33.333% - 20px);
         padding: 30px 22px 20px 30px;
         position: relative;
         height: 254px;
@@ -550,8 +555,6 @@
 
     &__card--empty {
         background-color: $accent;
-        flex: 1 1 100%;
-        max-width: calc(33.333% - 20px);
         position: relative;
     }
 
