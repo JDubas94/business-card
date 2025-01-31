@@ -512,22 +512,6 @@
     &__text {
         max-width: 598px;
     }
-
-    // &__content-one {
-    //     padding: 193px 0 194px;
-    // }
-
-    // &__text-one {
-    //     max-width: 598px;
-    // }
-
-    // &__content-two {
-    //     padding: 179px 66px 180px 0;
-    // }
-
-    // &__content-three {
-    //     padding: 188px 0 188px 80px;
-    // }
 }
 
 .target {
@@ -540,8 +524,8 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: auto; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
         gap: 20px;
     }
 
@@ -695,6 +679,8 @@
 
     &__top {
         position: absolute;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     &__top-item {
@@ -740,8 +726,11 @@
 
     &__content-img {
         display: block;
-        width: 100%;
+        max-width: 100%;
+        // width: 100%;
         height: auto;
+        flex-basis: calc((100% - 40px) / 3);
+        max-width: calc((100% - 40px) / 3);
     }
 }
 
