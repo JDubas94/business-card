@@ -88,6 +88,7 @@
     &__btn {
         width: 260px;
         height: 61px;
+        color: #494A50;
         border: none;
         padding: 0;
         background-color: $accent;
@@ -596,71 +597,11 @@
         @extend %manrope-500;
         left: 30px;
         bottom: 30px;
+        padding: 0;
         cursor: pointer;
     }
 }
 
-.popup-top {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-
-    &__inner {
-        background-color: #fff;
-        max-width: 557px;
-        padding: 71px 50px 49px 51px;
-        text-align: center;
-        position: relative;
-    }
-
-    &__title {
-        font-size: 36px;
-        @extend %manrope-700;
-        margin-bottom: 20px;
-    }
-
-    &__text {
-        margin-bottom: 30px;
-    }
-
-    &__form {
-        max-width: 391px;
-        margin: 0 auto;
-    }
-
-    &__label {
-        display: block;
-        text-align: left;
-        margin-bottom: 20px;
-        font-size: 14px;
-    }
-
-    &__input {
-        width: 100%;
-        padding: 20px 10px;
-        border: 1px solid $accent;
-        margin-top: 8px;
-    }
-
-    &__input--text {
-        padding: 10px 10px 119px;
-    }
-
-    &__btn {
-        width: 100%;
-        height: 61px;
-        border: none;
-        background-color: $accent;
-        cursor: pointer;
-    }
-}
 
 .projects-tabs {
     padding: 50px 0;

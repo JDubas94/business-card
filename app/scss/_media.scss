@@ -24,22 +24,26 @@
             margin-right: 20px;
         }
     }
-    .why-me{
+
+    .why-me {
         padding-inline: 10px;
-        
-        &__content{
+
+        &__content {
             max-width: 477px;
             margin-left: 20px;
             padding-top: 0;
             padding-top: 75px;
         }
-        &__content-lists{
+
+        &__content-lists {
             gap: 10px;
         }
-        &__content-title{
+
+        &__content-title {
             font-size: 36px;
         }
-        &__list-item{
+
+        &__list-item {
             width: auto;
             text-align: left;
         }
@@ -100,10 +104,11 @@
             padding-left: 10px;
             padding-right: 10px;
             padding-top: 49px;
+            position: relative;
         }
 
+
         &__content {
-            position: relative;
             padding-top: 9px;
             margin-right: 20px;
 
@@ -112,7 +117,7 @@
         &__title {
             font-size: 36px;
             position: absolute;
-            top: -49px;
+            top: 0;
             margin-top: 0;
             margin-bottom: 0;
         }
@@ -173,8 +178,10 @@
         &__title {
             font-size: 36px;
         }
+
         &__top-item {
             font-size: 18px;
+
             &+.projects-tabs__top-item {
                 margin-left: 38px;
             }
@@ -192,8 +199,7 @@
             max-width: 100%;
         }
     }
-    // .popup-top
-    // &__inner
+
 }
 
 @media (max-width: 845px) {
@@ -482,30 +488,36 @@
             flex-basis: calc((100% - 18px) / 3);
         }
     }
-    .why-me{
-        &__content{
+
+    .why-me {
+        &__content {
             max-width: 337px;
             padding-top: 0;
         }
-        &__title{
+
+        &__title {
             font-size: 32px;
         }
-        &__img{
+
+        &__img {
             width: 337px;
             height: 100%;
         }
-        &__list-item{
+
+        &__list-item {
             font-size: 16px;
         }
-        &__content-text{
+
+        &__content-text {
             font-size: 16px;
             margin-top: 10px;
         }
-        &__list-item--left{
+
+        &__list-item--left {
             order: 1;
         }
     }
-    
+
 }
 
 @media (max-width: 744px) {
@@ -607,6 +619,7 @@
         }
     }
 
+
 }
 
 @media (max-width: 700px) {
@@ -683,24 +696,30 @@
             border-top: 1px solid #fff;
         }
     }
-    .why-me{
+
+    .why-me {
         padding-top: 113px;
         padding-bottom: 50px;
-        &__wrapper{
+
+        &__wrapper {
             flex-direction: column;
         }
-        &__container-img{
+
+        &__container-img {
             margin-bottom: 20px;
         }
-        &__img{
+
+        &__img {
             width: 100%;
         }
-        &__content{
+
+        &__content {
             position: relative;
             margin-left: 0;
             max-width: 100%;
         }
-        &__content-title{
+
+        &__content-title {
             font-size: 24px;
             position: absolute;
             top: calc(-30px - 105vw);
@@ -719,7 +738,7 @@
     }
 
     .services {
-        padding: 50px 10px 152px;
+        padding: 50px 10px 100px;
 
         &__items {
             flex-direction: column;
@@ -730,7 +749,7 @@
             max-width: 100%;
             width: 100%;
             padding: 30px 17px 22px 20px;
-            height: auto;
+            height: 342px;
         }
 
         &__item::before {
@@ -751,21 +770,24 @@
         &__item-facebook::after {
             width: 169px;
             height: 169px;
-            bottom: -108px;
+            bottom: -77px;
+            right: 5px;
         }
     }
 
     .smm {
-        padding-bottom: 50px;
+        padding-bottom: 20px;
 
         &__title {
-            margin-bottom: 0;
+            margin-bottom: 20px;
             font-size: 24px;
         }
 
         &__item {
             flex-direction: column;
-            padding-top: 57px;
+            padding-top: 43px;
+            position: relative;
+            margin-bottom: 30px;
         }
 
         &__img {
@@ -776,18 +798,11 @@
             order: -1;
         }
 
-        &__content {
-            position: relative;
-        }
-
         &__subtitle {
             position: absolute;
             left: 0;
-            top: -94vw;
-        }
-
-        &__subtitle--top {
-            top: -97vw;
+            top: 0;
+            margin-bottom: 0;
         }
 
         &__text {
@@ -874,13 +889,13 @@
 
         &__container-img {
             order: -1;
+            margin-bottom: 20px;
         }
 
         &__title {
-            top: -30px;
             font-size: 24px;
-            top: calc(-50px - 82vw);
             left: 50%;
+            top: 8px;
             transform: translate(-50%, -50%);
         }
 
@@ -931,46 +946,57 @@
                 margin-left: 36px;
             }
         }
-        &__content-boxtext{
+
+        &__content-boxtext {
             font-size: 15px;
             padding-top: 52px;
         }
-        &__content-boximages{
+
+        &__content-boximages {
             gap: 4px;
         }
+
         &__content-img {
             max-width: calc((100% - 8px) / 3);
             flex-basis: calc((100% - 8px) / 3);
         }
     }
-    .why-me{
-        &__list-item{
+
+    .why-me {
+        &__list-item {
             font-size: 15px;
         }
-        &__content-lists{
+
+        &__content-lists {
             margin-bottom: 20px;
         }
-        &__content-text{
+
+        &__content-text {
             margin-top: 0;
             font-size: 15px;
         }
     }
 }
-@media (max-width: 360px){
-    .projects-tabs{
+
+@media (max-width: 360px) {
+    .projects-tabs {
         padding-top: 20px;
-        &__title{
+
+        &__title {
             letter-spacing: -0.4px;
             margin-bottom: 20px;
         }
-        &__top-item{
+
+        &__top-item {
             padding-bottom: 5px;
             margin-bottom: 10px;
+
             &+.projects-tabs__top-item {
                 margin-left: 16px;
             }
         }
-        &__content-boxtext{
+
+        &__content-boxtext {
             font-size: 11px;
             margin-bottom: 10px;
         }
@@ -1042,12 +1068,6 @@
         }
     }
 
-    .about-me {
-        &__title {
-            top: calc(-50px - 75vw);
-        }
-    }
-
     .smm {
         padding-bottom: 40px;
     }
@@ -1062,6 +1082,7 @@
 
         &__item {
             padding: 20px 24px 20px 15px;
+            height: 357px;
         }
 
         &__subtitle {
@@ -1123,14 +1144,18 @@
             top: 15px;
         }
     }
-    .why-me{
+
+    .why-me {
         padding-top: 94px;
         padding-bottom: 30px;
-        &__content-title{
+
+        &__content-title {
             top: calc(-30px - 96vw);
         }
-        &__list-item{
+
+        &__list-item {
             font-size: 11px;
         }
     }
+
 }
