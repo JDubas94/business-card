@@ -35,7 +35,7 @@ function styles() {
 
 function scripts() {
     return src([
-        'node_modules/jquery/dist/jquery.js',
+        'node_modules/jquery/docs/jquery.js',
         'app/js/main.js'
     ])
         .pipe(concat('main.min.js'))
@@ -57,12 +57,12 @@ function images() {
                 ]
             })
         ]))
-        .pipe(dest('dist/images'))
+        .pipe(dest('docs/images'))
 }
 
 function fonts() {
     return src('app/fonts/**/*')
-        .pipe(dest('dist/fonts'));
+        .pipe(dest('docs/fonts'));
 }
 
 function build() {
@@ -71,11 +71,11 @@ function build() {
         'app/css/style.min.css',
         'app/js/main.min.js'
     ], {base: 'app'})
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
 }
 
 function cleanDist(){
-    return del('dist')
+    return del('docs')
 }
 
 function watching() {
